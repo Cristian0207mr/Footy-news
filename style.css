@@ -1,0 +1,337 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    color: white;
+    background-color: #030007;
+    /*Fondo sacado de heroppatterns.com*/
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23524d00' fill-opacity='0.0'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+    font-size: 1.6rem;
+    font-family: 'Rubik', sans-serif;
+}
+a
+{
+    color: white;
+    text-decoration: none;/*Quitamos el subrayado de la etiqueta a*/
+}
+ul
+{
+    list-style: none;
+}
+.container
+{
+    width: 90%;
+    margin: auto;
+}
+
+/*Crearemos los estilos de la navegacion*/
+.nav-main
+{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 2rem 0;
+}
+
+/*Cambiamos el tamaño de la imagen*/
+.nav-brand
+{
+    width: 5rem;
+}
+ /*Seccion del nav left*/
+.nav-main ul {
+    display: flex; /*pusimos el ul en la misma linea*/ 
+}
+.nav-main ul li 
+{
+    padding: 1rem;
+}
+
+/*Añadiremos un espaciado utilizando esto*/
+.nav-main ul li a
+{
+padding: 0.6rem;
+}
+
+/*Con la pseudo clase de hover cuando ponemos el cursor en los enlaces se subrayan con blanco*/
+.nav-main ul li a:hover 
+{
+    border-bottom: 0.2rem solid white;
+}
+
+/*Se pone para que la barra de navegacion quede al lado del icono */
+.nav-main ul.nav-menu
+{
+    flex: 1;
+    margin-left: 2rem;/*queda espaciado del icono*/
+}
+/*Tres lineas para desplegar*/
+.menu-btn
+{
+    position: absolute;
+    cursor: pointer;
+    top: 1.5rem;
+    right: 3rem;
+    z-index: 2;
+    font-size: 1.5rem;
+    display: none;
+}
+
+/*showcase o seccion principal*/
+hr
+{
+    margin: 1rem 0;
+}
+
+.showcase
+{
+    width: 100%;
+    height: 55rem;
+    background: url(img/showcase2.jpeg) no-repeat center/cover;/*Ponemos la imagen de fondo*//*No repeat y centramos la imagen y que este abarcando todo*/
+    padding: 5rem;/*Para los elementos que coloquemos de bajo*/
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column; /*para que el texto que coloquemos debajo este centrado*/
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.showcase-btn
+{
+    cursor: pointer;/*Para que aparezca el icono despues de posicionar el boton*/
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    background: #262626;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border:0.1rem solid white ;
+    margin: 1rem 1rem;
+}
+/*Poner que el boton resalte cuando pongamos el cursor encima*/
+.showcase-btn:hover
+{
+    opacity: .6;
+}
+.showcase h2, .showcase p
+{
+    margin-bottom: 1rem;
+}
+
+/*Estilisamos las nuevas noticias*/
+.new-notices 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*De esta manera ponemos las noticas por columnas*/
+    gap: 2.5rem;/*Esto es un espaciado interno*/
+    margin: 1rem 0;
+}
+
+.new-notices img
+{
+    width: 100%;
+    height: 18rem;
+}
+.new-notices h3
+{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.new-notices a
+{
+    padding: 1rem 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.new-notices a:hover
+{
+    text-decoration: underline;
+}
+
+/*Banner*/
+.card-banner-uno
+{
+    width: 100%;
+    height: 35rem;
+    background: url(./img/banner.jpg) no-repeat center center/cover;
+    margin-bottom:  4rem;
+}
+
+.card-banner-uno .content 
+{
+    width: 40%;
+    padding: 9rem 0 0 3rem;
+    color: #ffffff;
+}
+
+.card-banner-uno p, .card-banner-uno h2, .card-banner-uno a
+{
+    margin: 1rem 0 0 2rem;
+}
+
+/*Banner two*/
+.card-banner-dos
+{
+    width: 100%;
+    height: 35rem;
+    background: url(./img/Banner2.png) no-repeat center center/cover;
+    margin-bottom: 4rem;
+}
+.card-banner-dos .content 
+{
+    width: 40%;
+    padding: 9rem 0 0 3rem;
+    color: #ffffff;
+}
+ 
+.card-banner-dos p, .card-banner-dos h2, .card-banner-dos a
+{
+    margin: 1rem 0 0 2rem;
+}
+/*Social*/
+.social
+{
+    margin: 5rem;
+}
+.social p 
+{
+    text-align: center;
+    font-size: 3rem;/*Lo ponemos como una especie de titulos*/
+    margin-bottom: 2rem;
+}
+.links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a 
+{
+    margin: 0 2rem;
+}
+
+.links a i
+{
+    font-size:3rem ;
+}
+/*Footer links*/
+.footer-links
+{
+    background: #2f3640;
+    color: #616161;
+    font-size: 1.2rem;
+    padding: 3.5rem 0;
+}
+
+.footer-container
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container ul
+{
+    margin: auto;
+}
+
+.footer-container ul li
+{
+    line-height: 2.8;
+}
+
+.footer{
+    background: #2f3640;
+    color: #616161;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/*Empezamos con las media querie*/
+
+@media (max-width:700px){
+    .menu-btn{
+        display: block;
+    }
+    .nav-main ul.nav-menu
+    {
+        display: block;
+        position: absolute;/*Para que quede por encima de todo*/
+        top: 0;/*para que quede en la esquina*/
+        left: 0;
+        background: #2f3640;
+        height: 100%;
+        transform: translateX(-400px);
+        transition: transdorm .5s ease-in-out;
+        padding: 30px;
+        opacity: .9;
+    }
+    .nav-main ul.nav-menu.show
+    {
+        transform: translateX(-20px);
+    }
+    .nav-main ul.nav-menu li
+    {
+        padding: 20px;
+        border-bottom: #ccc solid 1px;
+        font-size: 14px;
+    }
+
+    .nav-main ul.nav-menu-right
+    {
+        margin-right: 40px;
+    }
+    .new-notices{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-banner-uno .content, 
+    .card-banner-dos .content
+    {
+        width: 80%;
+    }
+    .footer-links .footer-container
+    {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width:450px){
+    .new-notices{
+        grid-template-columns: 1fr;
+    }
+    .new-notices img {
+        height: 250px;
+    }
+
+    .card-banner-uno .content, .card-banner-dos .content{
+        width: 100%;
+        padding: 60px 20px;
+    }
+
+    .footer-links .footer-container
+    {
+        grid-template-columns: 1fr;
+    }
+}
